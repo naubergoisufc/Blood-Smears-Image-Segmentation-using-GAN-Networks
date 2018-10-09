@@ -46,6 +46,7 @@ grestore
 \smartqed  % flush right qed marks, e.g. at end of proof
 %
 \usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
 %
 % \usepackage{mathptmx}      % use Times fonts if available on your TeX system
 %
@@ -67,7 +68,9 @@ grestore
 %\titlerunning{Short form of title}        % if too long for running head
 
 \author{Francisco Nauber Bernardo Gois         \and
-        Second Author %etc.
+        João Alexandre Lôbo Marques \and
+        Allberson Bruno de Oliveira Dantas \and 
+        %etc.
 }
 
 %\authorrunning{Short form of author list} % if too long for running head
@@ -90,9 +93,8 @@ grestore
 \maketitle
 
 \begin{abstract}
-Insert your abstract here. Include keywords, PACS and mathematical
-subject classification numbers as needed.
-\keywords{First keyword \and Second keyword \and More}
+Fast and efficient diagnosis of malaria cases is essential in efforts to eliminate the disease. The default to diagnose malaria is a microscopy exam. This process becomes problematic when cases happen in rural areas and experts cannot be present to make such a diagnosis. Automation of the diagnostical process with the use of an intelligent system that would recognize malaria parasites could aid in problem resolution. Several laboratories capture the images in low quality using a system of microscopes based on mobile devices. Due to the poor quality of this system, conventional algorithms do not process these images pro- perly. The use of Deep Learning may be a way to improve the accuracy of the present method. nevertheless, such an approach usually requires a large number of training sets, which is the reason why is difficult to apply to diagnostic systems deep learning techniques, since the data are usually protected by medical confi- dentiality. The use of Generating Adverse Networks can help in generating data for training and improving the accuracy of deep learning models. The objective of this research project is to use Generating Adversarial Networks in conjunc- tion with deep learning models in order to improve accuracy in the diagnosis of malaria in peripheral blood smears.
+\keywords{Malaria  \and Generative Adversarial Network \and More}
 % \PACS{PACS code1 \and PACS code2 \and more}
 % \subclass{MSC code1 \and MSC code2 \and more}
 \end{abstract}
@@ -101,16 +103,55 @@ subject classification numbers as needed.
 \label{intro}
 
 
+The global burden of malaria is enormous. In 2012, the World Health Organization (WHO) estimated 207,000,000 cases of malaria globally, 627,000 of which resulted in deaths among African children. In the Philippines, malaria is considered to be the 9th leading cause of morbidity, with 58 out of the 81 provinces being malaria-endemic. Among the major obstacles for malaria eradication are the remote location of the majority of malaria cases and the lack
+of trained individuals that can analyze blood samples using
+microscopy. This is where automated systems for diagnosis
+come in. Instead of manually going over a blood sample and
+checking for the presence of malaria parasites, photographs
+of the sample viewed from the microscope are analyzed by
+an intelligent system. With such systems, the remote location
+of malaria cases becomes less of a problem if such systems
+become publicly available as trained microscopists and doctors \cite{Premaratne2006AFilms}\cite{Penas2017}.
+
+
+
+
 Malaria rapid diagnostic tests (RDTs) are relatively simple to perform and provide results quickly for making treatment decisions. However, the accuracy and application of RDT
 results depends on several factors such as quality of the RDT, storage, transport and end user performance. A cross sectional survey to explore factors that affect the performance and use of
 RDTs was conducted in the primary care facilities in South Africa \cite{Moonasar2007}
 
+Our objective was to develop an automated tool recognition of intracellular malaria parasites in stained blood films.    
+
+\section{Deep Learning for Malaria Diagnosis}
 
 \section{The Proposed Method -GAN Segmentation Method}
 \label{segmethod}
 
 
 The GAN network image generation and the blood segmentation process consists of the following components: blood smears image acquisition, image generation with GANs networks,  apply adaptive threshold filter and image segmentation.
+
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[]
+\begin{tabular}{|l|l|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\textbf{\begin{tabular}[c]{@{}l@{}}Number of \\ Samples \\ Created\\ by GAN \\ Network\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Number of\\ Real \\ Images\\ for Test\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Number \\ of correctly \\ classified \\ samples\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Number of \\ incorrectly \\ classified \\ samples\end{tabular}} \\ \hline
+600                                                                                            & 600                                                                                 & 420 (70 \%)                                                                                      & 180                                                                                                \\ \hline
+800                                                                                            & 600                                                                                 & 406 (68 \%)                                                                                      & 194                                                                                                \\ \hline
+1000                                                                                           & 600                                                                                 & 453 (76 \%)                                                                                      & 147                                                                                                \\ \hline
+1200                                                                                           & 600                                                                                 & 424 (71 \%)                                                                                      & 176                                                                                                \\ \hline
+1400                                                                                           & 600                                                                                 & \begin{tabular}[c]{@{}l@{}}429 \\ ($\sim$71 \%)\end{tabular}                                     & 171                                                                                                \\ \hline
+1600                                                                                           & 600                                                                                 & 430 (72 \%)                                                                                      & 170                                                                                                \\ \hline
+1800                                                                                           & 600                                                                                 & 480 (80  \%)                                                                                     & 120                                                                                                \\ \hline
+2200                                                                                           & 600                                                                                 & 600 (100 \%)                                                                                     & 0                                                                                                  \\ \hline
+\end{tabular}
+\end{table}
+
+
 
 
 Text with citations \cite{RefB} and \cite{RefJ}.
