@@ -1,0 +1,10 @@
+\section{Generatove Adversarial Networks}
+
+Learning reusable resource representations from large datasets has been an active research area. One way to build good image representations is through Generative Adversarial Networks. Generator Adverse Networks (GAN) learn to synthesize elements of a target distribution using two competing neural networks. GAN networks can produce compelling images that are sharper than those produced by automatic encoders using pixel losses. The Generator (G) network selects an n-dimensional random sample from a predefined distribution, conventionally called latent space and attempts to create examples of the target distribution. The discriminant network (D) takes a generated or real example as input and has to make the binary decision whether the input is real or generated. This competition process is expressed as a zero-sum game in the following loss term:
+
+Let x be a natural image taken from a distribution, $ p_X$
+
+
+\begin{equation}
+    \underset{g}{max} \underset{f}{min} V(f,g)= \mathbb{E}_{x \sim px} [-log(f(x))]+\mathbb{E}_{z \sim pz}[-log(1-f(g(z)))]
+\end{equation}
