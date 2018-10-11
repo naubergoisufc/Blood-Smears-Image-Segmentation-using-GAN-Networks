@@ -1,0 +1,720 @@
+@article{Bibin2017,
+abstract = {In this paper, we propose a novel method to identify the presence of malaria parasites in human peripheral blood smear images using a deep belief network (DBN). This paper introduces a trained model based on a DBN to classify 4100 peripheral blood smear images into the parasite or non-parasite class. The proposed DBN is pre-trained by stacking restricted Boltzmann machines using the contrastive divergence method for pre-training. To train the DBN, we extract features from the images and initialize the visible variables of the DBN. A concatenated feature of color and texture is used as a feature vector in this paper. Finally, the DBN is discriminatively fine-tuned using a backpropagation algorithm that computes the probability of class labels. The optimum size of the DBN architecture used in this paper is 484-600-600-600-600-2, in which the visible layer has 484 nodes and the output layer has two nodes with four hidden layers containing 600 hidden nodes in every layer. The proposed method has performed significantly better than the other state-of-the-art methods with an F-score of 89.66{\%}, a sensitivity of 97.60{\%}, and specificity of 95.92{\%}. This paper is the first application of a DBN for malaria parasite detection in human peripheral blood smear images.},
+author = {Bibin, Dhanya and Nair, Madhu S. and Punitha, P.},
+doi = {10.1109/ACCESS.2017.2705642},
+file = {:Users/naubergois/DeepLearningMalaria/07931565.pdf:pdf},
+isbn = {4846006006006},
+issn = {21693536},
+journal = {IEEE Access},
+keywords = {Deep learning,contrastive divergence,deep belief network,discriminative training,malaria parasite detection,restricted Boltzmann machine},
+pages = {9099--9108},
+title = {{Malaria Parasite Detection from Peripheral Blood Smear Images Using Deep Belief Networks}},
+volume = {5},
+year = {2017}
+}
+
+
+
+@article{Lecun2015,
+abstract = {Deep learning allows computational models that are composed of multiple processing layers to learn representations of data with multiple levels of abstraction. These methods have dramatically improved the state-of-the-art in speech recognition, visual object recognition, object detection and many other domains such as drug discovery and genomics. Deep learning discovers intricate structure in large data sets by using the backpropagation algorithm to indicate how a machine should change its internal parameters that are used to compute the representation in each layer from the representation in the previous layer. Deep convolutional nets have brought about breakthroughs in processing images, video, speech and audio, whereas recurrent nets have shone light on sequential data such as text and speech.},
+archivePrefix = {arXiv},
+arxivId = {arXiv:1312.6184v5},
+author = {Lecun, Yann and Bengio, Yoshua and Hinton, Geoffrey},
+doi = {10.1038/nature14539},
+eprint = {arXiv:1312.6184v5},
+file = {:Users/naubergois/DeepLearning/nature14539.pdf:pdf},
+isbn = {9780521835688},
+issn = {14764687},
+journal = {Nature},
+mendeley-groups = {DeepLearning},
+number = {7553},
+pages = {436--444},
+pmid = {10463930},
+title = {{Deep learning}},
+volume = {521},
+year = {2015}
+}
+
+
+@article{Poostchi2018,
+abstract = {Malaria remains a major burden on global health, with roughly 200 million cases worldwide and more than 400,000 deaths per year. Besides biomedical research and political efforts, modern information technology is playing a key role in many attempts at fighting the disease. One of the barriers toward a successful mortality reduction has been inadequate malaria diagnosis in particular. To improve diagnosis, image analysis software and machine learning methods have been used to quantify parasitemia in microscopic blood slides. This article gives an overview of these techniques and discusses the current developments in image analysis and machine learning for microscopic malaria diagnosis. We organize the different approaches published in the literature according to the techniques used for imaging, image preprocessing, parasite detection and cell segmentation, feature computation, and automatic cell classification. Readers will find the different techniques listed in tables, with the relevant articles cited next to them, for both thin and thick blood smear images. We also discussed the latest developments in sections devoted to deep learning and smartphone technology for future malaria diagnosis.},
+author = {Poostchi, Mahdieh and Silamut, Kamolrat and Maude, Richard J. and Jaeger, Stefan and Thoma, George},
+doi = {10.1016/j.trsl.2017.12.004},
+file = {:Users/naubergois/DeepLearningMalaria/1-s2.0-S193152441730333X-main.pdf:pdf},
+isbn = {1878-1810},
+issn = {18781810},
+journal = {Translational Research},
+pages = {36--55},
+pmid = {29360430},
+publisher = {Elsevier Inc.},
+title = {{Image analysis and machine learning for detecting malaria}},
+url = {https://doi.org/10.1016/j.trsl.2017.12.004},
+volume = {194},
+year = {2018}
+}
+
+
+
+@inproceedings{belkin2002using,
+  title={Using manifold stucture for partially labeled classification},
+  author={Belkin, Mikhail and Niyogi, Partha},
+  booktitle={Advances in neural information processing systems},
+  pages={929--936},
+  year={2002}
+}
+
+@article{berard1994embedding,
+  title={Embedding Riemannian manifolds by their heat kernel},
+  author={B{\'e}rard, Pierre and Besson, G{\'e}rard and Gallot, Sylvain},
+  journal={Geometric \& Functional Analysis GAFA},
+  volume={4},
+  number={4},
+  pages={373--398},
+  year={1994},
+  publisher={Springer}
+}
+
+@article{coifman2005geometric,
+  title={Geometric diffusions as a tool for harmonic analysis and structure definition of data: Diffusion maps},
+  author={Coifman, Ronald R and Lafon, Stephane and Lee, Ann B and Maggioni, Mauro and Nadler, Boaz and Warner, Frederick and Zucker, Steven W},
+  journal={Proceedings of the National Academy of Sciences of the United States of America},
+  volume={102},
+  number={21},
+  pages={7426--7431},
+  year={2005},
+  publisher={National Acad Sciences}
+}
+
+@article{Rajpurkar2017,
+abstract = {We build a deep reinforcement learning (RL) agent that can predict the likelihood of an individual testing positive for malaria by asking questions about their household. The RL agent learns to determine which survey question to ask next and when to stop to make a prediction about their likelihood of malaria based on their responses hitherto. The agent incurs a small penalty for each question asked, and a large reward/penalty for making the correct/wrong prediction; it thus has to learn to balance the length of the survey with the accuracy of its final predictions. Our RL agent is a Deep Q-network that learns a policy directly from the responses to the questions, with an action defined for each possible survey question and for each possible prediction class. We focus on Kenya, where malaria is a massive health burden, and train the RL agent on a dataset of 6481 households from the Kenya Malaria Indicator Survey 2015. To investigate the importance of having survey questions be adaptive to responses, we compare our RL agent to a supervised learning (SL) baseline that fixes its set of survey questions a priori. We evaluate on prediction accuracy and on the number of survey questions asked on a holdout set and find that the RL agent is able to predict with 80{\%} accuracy, using only 2.5 questions on average. In addition, the RL agent learns to survey adaptively to responses and is able to match the SL baseline in prediction accuracy while significantly reducing survey length.},
+archivePrefix = {arXiv},
+arxivId = {1711.09223},
+author = {Rajpurkar, Pranav and Polamreddi, Vinaya and Balakrishnan, Anusha},
+eprint = {1711.09223},
+file = {:Users/naubergois/DeepLearningMalaria/1711.09223.pdf:pdf},
+number = {Nips},
+title = {{Malaria Likelihood Prediction By Effectively Surveying Households Using Deep Reinforcement Learning}},
+url = {http://arxiv.org/abs/1711.09223},
+year = {2017}
+}
+
+@book{WHO2017,
+abstract = {The World Malaria Report 2016 summarizes information received from malaria-endemic countries and other sources, and updates the analyses presented in the 2015 report. The World Malaria Report is WHO's flagship malaria publication, released each year in December. It assesses global and regional malaria trends, highlights progress towards global targets, and describes opportunities and challenges in controlling and eliminating the disease. Most of the data presented in this report is for 2015.},
+archivePrefix = {arXiv},
+arxivId = {arXiv:1011.1669v3},
+author = {WHO},
+booktitle = {World Health Organization},
+doi = {10.1071/EC12504},
+eprint = {arXiv:1011.1669v3},
+file = {:Users/naubergois/DeepLearningMalaria/9789241565523-eng.pdf:pdf},
+isbn = {9789241511711},
+issn = {0311-4546},
+keywords = {Global Malaria Programme,ISBN 978-92-4-156552-3,Malaria,World Health Organization,World malaria report 2017},
+pages = {186},
+pmid = {9375913},
+title = {{World Malaria Report 2017}},
+url = {http://apps.who.int/iris/bitstream/handle/10665/259492/9789241565523-eng.pdf;jsessionid=3B05B30235850B2B29A7FFFDD8A874D8?sequence=1},
+year = {2017}
+}
+
+@article{Petersen2015,
+abstract = {Context Systematic mapping studies are used to structure a research area, while systematic reviews are focused on gathering and synthesizing evidence. The most recent guidelines for systematic mapping are from 2008. Since that time, many suggestions have been made of how to improve systematic literature reviews (SLRs). There is a need to evaluate how researchers conduct the process of systematic mapping and identify how the guidelines should be updated based on the lessons learned from the existing systematic maps and SLR guidelines. Objective To identify how the systematic mapping process is conducted (including search, study selection, analysis and presentation of data, etc.); to identify improvement potentials in conducting the systematic mapping process and updating the guidelines accordingly. Method We conducted a systematic mapping study of systematic maps, considering some practices of systematic review guidelines as well (in particular in relation to defining the search and to conduct a quality assessment). Results In a large number of studies multiple guidelines are used and combined, which leads to different ways in conducting mapping studies. The reason for combining guidelines was that they differed in the recommendations given. Conclusion The most frequently followed guidelines are not sufficient alone. Hence, there was a need to provide an update of how to conduct systematic mapping studies. New guidelines have been proposed consolidating existing findings.},
+archivePrefix = {arXiv},
+arxivId = {arXiv:1011.1669v3},
+author = {Petersen, Kai and Vakkalanka, Sairam and Kuzniarz, Ludwik},
+doi = {10.1016/j.infsof.2015.03.007},
+eprint = {arXiv:1011.1669v3},
+file = {:Users/naubergois/MapeamentoSistematico/1-s2.0-S0950584915000646-main.pdf:pdf},
+isbn = {0360-1315},
+issn = {09505849},
+journal = {Information and Software Technology},
+keywords = {Guidelines,Software engineering,Systematic mapping studies},
+pages = {1--18},
+pmid = {25246403},
+publisher = {Elsevier B.V.},
+title = {{Guidelines for conducting systematic mapping studies in software engineering: An update}},
+url = {http://dx.doi.org/10.1016/j.infsof.2015.03.007},
+volume = {64},
+year = {2015}
+}
+
+@article{Mehrjou,
+author = {Mehrjou, Arash},
+file = {:Users/naubergois/DeepLearningMalaria/1708.05200.pdf:pdf},
+keywords = {image processing,malaria,motorized microscope,thin blood smears},
+pages = {1--22},
+title = {{Towards life cycle identification of malaria parasites using machine learning and Riemannian geometry}}
+}
+
+@article{Gueorguieva2013,
+author = {Gueorguieva, Ralitza and Rosenheck, Robert and Lin, Haiqun},
+doi = {10.1111/j.1467-985X.2011.00719.x.Joint},
+file = {:Users/naubergois/DeepLearningMalaria/1804.09548.pdf:pdf},
+isbn = {9781573317795},
+issn = {1749-6632},
+journal = {J R Stat Soc Ser A Stat Soc},
+keywords = {competing risk,dropout,interval censoring,joint analysis,repeated measures},
+number = {2},
+pages = {417--433},
+pmid = {20146720},
+title = {{Applying Faster R-CNN for Object Detection on Malaria Images}},
+volume = {175},
+year = {2013}
+}
+
+@article{Eshel2017,
+abstract = {The World Health Organization estimates that nearly 500 million malaria tests are performed annually. While microscopy and rapid diagnostic tests (RDTs) are the main diagnostic approaches, no single method is inexpensive, rapid, and highly accurate. Two recent studies from our group have demonstrated a prototype computer vision platform that meets those needs. Here we present the results from two clinical studies on the commercially available version of this technology, the Sight Diagnostics Parasight platform, which provides malaria diagnosis, species identification, and parasite quantification. We conducted a multisite trial in Chennai, India (Apollo Hospital [ n = 205]), and Nairobi, Kenya (Aga Khan University Hospital [ n = 263]), in which we compared the device to microscopy, RDTs, and PCR. For identification of malaria, the device performed similarly well in both contexts (sensitivity of 99{\%} and specificity of 100{\%} at the Indian site and sensitivity of 99.3{\%} and specificity of 98.9{\%} at the Kenyan site, compared to PCR). For species identification, the device correctly identified 100{\%} of samples with Plasmodium vivax and 100{\%} of samples with Plasmodium falciparum in India and 100{\%} of samples with P. vivax and 96.1{\%} of samples with P. falciparum in Kenya, compared to PCR. Lastly, comparisons of the device parasite counts with those of trained microscopists produced average Pearson correlation coefficients of 0.84 at the Indian site and 0.85 at the Kenyan site.},
+author = {Eshel, Yochay and Houri-Yafin, Arnon and Benkuzari, Hagai and Lezmy, Natalie and Soni, Mamta and Charles, Malini and Swaminathan, Jayanthi and Solomon, Hilda and Sampathkumar, Pavithra and Premji, Zul and Mbithi, Caroline and Nneka, Zaitun and Onsongo, Simon and Maina, Daniel and Levy-Schreier, Sarah and Cohen, Caitlin Lee and Gluck, Dan and Pollak, Joseph Joel and Salpeter, Seth J.},
+doi = {10.1128/JCM.02155-16},
+file = {:Users/naubergois/DeepLearningMalaria/zjm768.pdf:pdf},
+isbn = {1098-660X (Electronic)
+0095-1137 (Linking)},
+issn = {1098660X},
+journal = {Journal of Clinical Microbiology},
+keywords = {Computer vision,Diagnosis,Machine learning,Malaria},
+number = {3},
+pages = {768--775},
+pmid = {27974542},
+title = {{Evaluation of the parasight platform for malaria diagnosis}},
+volume = {55},
+year = {2017}
+}
+
+@article{Mueller2009,
+abstract = {Plasmodium vivax is geographically the most widely distributed cause of malaria in people, with up to 2{\textperiodcentered}5 billion people at risk and an estimated 80 million to 300 million clinical cases every year-including severe disease and death. Despite this large burden of disease, P vivax is overlooked and left in the shadow of the enormous problem caused by Plasmodium falciparum in sub-Saharan Africa. The technological advances enabling the sequencing of the P vivax genome and a recent call for worldwide malaria eradication have together placed new emphasis on the importance of addressing P vivax as a major public health problem. However, because of this parasite's biology, it is especially difficult to interrupt the transmission of P vivax, and experts agree that the available methods for preventing and treating infections with P vivax are inadequate. It is thus imperative that the development of new methods and strategies become a priority. Advancing the development of such methods needs renewed emphasis on understanding the biology, pathogenesis, and epidemiology of P vivax. This Review critically examines what is known about P vivax, focusing on identifying the crucial gaps that create obstacles to the elimination of this parasite in human populations. {\textcopyright} 2009 Elsevier Ltd. All rights reserved.},
+author = {Mueller, Ivo and Galinski, Mary R. and Baird, J. Kevin and Carlton, Jane M. and Kochar, Dhanpat K. and Alonso, Pedro L. and del Portillo, Hernando A.},
+doi = {10.1016/S1473-3099(09)70177-X},
+file = {:Users/naubergois/DeepLearningMalaria/1-s2.0-S147330990970177X-main.pdf:pdf},
+isbn = {1474-4457 (Electronic)$\backslash$n1473-3099 (Linking)},
+issn = {14733099},
+journal = {The Lancet Infectious Diseases},
+number = {9},
+pages = {555--566},
+pmid = {19695492},
+publisher = {Elsevier Ltd},
+title = {{Key gaps in the knowledge of Plasmodium vivax, a neglected human malaria parasite}},
+url = {http://dx.doi.org/10.1016/S1473-3099(09)70177-X},
+volume = {9},
+year = {2009}
+}
+
+
+@article{Kalantarmotamedi2018,
+abstract = {Background: Nearly half of the world's population (3.2 billion people) were at risk of malaria in 2015, and resistance to current therapies is a major concern. While the standard of care includes drug combinations, there is a pressing need to identify new combinations that can bypass current resistance mechanisms. In the work presented here, a combined transcriptional drug repositioning/discovery and machine learning approach is proposed. Methods: The integrated approach utilizes gene expression data from patient-derived samples, in combination with large-scale anti-malarial combination screening data, to predict synergistic compound combinations for three Plasmodium falciparum strains (3D7, DD2 and HB3). Both single compounds and combinations predicted to be active were prospectively tested in experiment. Results: One of the predicted single agents, apicidin, was active with the AC50 values of 74.9, 84.1 and 74.9 nM in 3D7, DD2 and HB3 P. falciparum strains while its maximal safe plasma concentration in human is 547.6 ± 136.6 nM. Apicidin at the safe dose of 500 nM kills on average 97{\%} of the parasite. The synergy prediction algorithm exhibited overall precision and recall of 83.5 and 65.1{\%} for mild-to-strong, 48.8 and 75.5{\%} for moderate-to-strong and 12.0 and 62.7{\%} for strong synergies. Some of the prospectively predicted combinations, such as tacrolimus-hydroxyzine and raloxifene-thioridazine, exhibited significant synergy across the three P. falciparum strains included in the study. Conclusions: Systematic approaches can play an important role in accelerating discovering novel combinational therapies for malaria as it enables selecting novel synergistic compound pairs in a more informed and cost-effective manner. {\textcopyright} The Author(s) 2018. This article is distributed under the terms of the Creative Commons Attribution 4.0 International License (http://creat iveco mmons .org/licen ses/by/4.0/), which permits unrestricted use, distribution, and reproduction in any medium, provided you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The Creative Commons Public Domain Dedication waiver (http://creat iveco mmons .org/ publi cdoma in/zero/1.0/) applies to the data made available in this article, unless otherwise stated.},
+author = {Kalantarmotamedi, Yasaman and Eastman, Richard T. and Guha, Rajarshi and Bender, Andreas},
+doi = {10.1186/s12936-018-2294-5},
+file = {:Users/naubergois/DeepLearningMalaria/document.pdf:pdf},
+isbn = {1293601822945},
+issn = {14752875},
+journal = {Malaria Journal},
+keywords = {Compound combination modelling,Machine learning,Malaria,Synergistic anti-malaria compound combinations,Synergy prediction,Transcriptional drug repositioning},
+number = {1},
+pages = {1--16},
+pmid = {29642892},
+title = {{A systematic and prospectively validated approach for identifying synergistic drug combinations against malaria}},
+volume = {17},
+year = {2018}
+}
+
+@article{Park2016,
+abstract = {Malaria detection through microscopic examination of stained blood smears is a diagnostic challenge that heavily relies on the expertise of trained microscopists. This paper presents an automated analysis method for detection and staging of red blood cells infected by the malaria parasite Plasmodium falciparumat trophozoite or schizont stage. Unlike previous efforts in this area, this study uses quantitative phase images of unstained cells. Erythro- cytes are automatically segmented using thresholds of optical phase and refocused to enable quantitative comparison of phase images. Refocused images are analyzed to extract 23 morphologicaldescriptors based on the phase information. While all individual descriptors are highly statistically different between infected and uninfected cells, each descriptor does not enable separation of populations at a level satisfactory for clinical utility. To improve the diagnostic capacity, we applied various machine learning techniques, including linear discriminant classification (LDC), logistic regression (LR), and k-nearest neighbor classification (NNC), to formulate algorithms that combine all of the calculated physical parameters to distinguish cells more effectively. Results show thatLDC provides the highest accuracy of up to 99.7{\%} in detecting schizont stage infected cells compared to uninfected RBCs. NNCshowed slightly better accuracy (99.5{\%}) than eitherLDC (99.0{\%}) or LR (99.1{\%}) for discriminating late trophozoites from uninfected RBCs. However, for early trophozoites, LDC produced the best accuracy of 98{\%}. Discrimination of infection stage was less accurate, producing high specificity (99.8{\%}) but only 45.0{\%}-66.8{\%} sensitivity with early trophozoites most often mistaken for late trophozoite or schizont stage and late tro- phozoite and schizont stage most often confused for each other. Overall, this methodology points to a significant clinical potential of using quantitative phase imaging to detect and stage malaria infection without staining or expert analysis},
+author = {Park, Han Sang and Rinehart, Matthew T. and Walzer, Katelyn A. and {Ashley Chi}, Jen Tsan and Wax, Adam},
+doi = {10.1371/journal.pone.0163045},
+file = {:Users/naubergois/DeepLearningMalaria/document(1).pdf:pdf},
+issn = {19326203},
+journal = {PLoS ONE},
+number = {9},
+pmid = {27636719},
+title = {{Automated Detection of P. falciparum using machine learning algorithms with quantitative phase images of unstained cells}},
+volume = {11},
+year = {2016}
+}
+
+@article{Savkare2012,
+abstract = {Malaria is a serious disease caused by a blood parasite named Plasmodium spp. The World Health Organization estimates 300-500 million malaria cases and more than 1 million deaths per year (Tek F. B. et al., 2006). Manual counting and classifications of infected erythrocytes is a time-consuming and laborious process (Selena W.S. Sio et al., 2007).The aim of our study to develop a fully automatic system for counting and classification of Malaria parasite infected erythrocytes and detection of life stage of parasites. The system uses Giemsa stained thin blood images for processing; using Otsu's threshold erythrocytes are segmented form pre-processed images; watershed algorithm is used to separate overlapped cells. Statistical and colour features are extracted and given to the SVM binary classifier which classifies Malaria infected erythrocytes and SVM multi classifier is used for detection of parasite life stages.},
+author = {Savkare, S.S. and Narote, S.P.},
+doi = {10.1016/j.protcy.2012.10.048},
+file = {:Users/naubergois/DeepLearningMalaria/1-s2.0-S2212017312005932-main.pdf:pdf},
+isbn = {2212-0173},
+issn = {22120173},
+journal = {Procedia Technology},
+keywords = {Feature Extraction,OTSU's threshold,SVM classifier,Watershed Transform},
+pages = {405--410},
+title = {{Automatic System for Classification of Erythrocytes Infected with Malaria and Identification of Parasite's Life Stage}},
+url = {http://linkinghub.elsevier.com/retrieve/pii/S2212017312005932},
+volume = {6},
+year = {2012}
+}
+
+@article{Mas2015,
+abstract = {Abstract In this paper we present a novel image processing algorithm providing good preliminary capabilities for in vitro detection of malaria. The proposed concept is based upon analysis of the temporal variation of each pixel. Changes in dark pixels mean that inter cellular activity happened, indicating the presence of the malaria parasite inside the cell. Preliminary experimental results involving analysis of red blood cells being either healthy or infected with malaria parasites, validated the potential benefit of the proposed numerical approach.},
+author = {Mas, David and Ferrer, Belen and Cojoc, Dan and Finaurini, Sara and Mico, Vicente and Garcia, Javier and Zalevsky, Zeev},
+doi = {10.1016/j.optcom.2015.03.064},
+file = {:Users/naubergois/DeepLearningMalaria/1-s2.0-S0030401815002655-main.pdf:pdf},
+issn = {00304018},
+journal = {Optics Communications},
+keywords = {Biomedicine,Image processing,Malaria detection,Microscopy},
+pages = {13--18},
+publisher = {Elsevier},
+title = {{Novel image processing approach to detect malaria}},
+url = {http://dx.doi.org/10.1016/j.optcom.2015.03.064},
+volume = {350},
+year = {2015}
+}
+
+@article{Bhowmick2013,
+abstract = {The objective of this study is to address quantitative microscopic approach for automated screening of erythrocytes in anaemic cases using scanning electron microscopic (SEM) images of unstained blood cells. Erythrocytes were separated from blood samples and processed for SEM imaging. Thereafter, erythrocytes were segmented using marker controlled watershed transformation technique. Total 47 structural and textural features of erythrocytes were extracted using various mathematical measures for six types of anaemic cases as compared to the control group. These features were statistically evaluated at 1{\%} level of significance and subsequently ranked using Fisher's F-statistic describing the group discriminating potentiality. Amongst all extracted features, twenty nine features were found to be statistically significant (p{\textless} 0.001). Finally, Bayesian classifier was applied to classify six types of anaemia based on top seventeen ranked features those of which are of course statistically significant. The present study yielded a predictive accuracy of 88.99{\%}. {\textcopyright} 2012 Elsevier Ltd.},
+author = {Bhowmick, Sirsendu and Das, Dev Kumar and Maiti, Asok Kumar and Chakraborty, Chandan},
+doi = {10.1016/j.micron.2012.09.003},
+file = {:Users/naubergois/DeepLearningMalaria/1-s2.0-S0968432812002260-main.pdf:pdf},
+issn = {09684328},
+journal = {Micron},
+keywords = {Anaemia,Bayesian classification,Erythrocyte,Scanning electron microscope,Statistical analysis,Structural and textural features},
+number = {1},
+pages = {384--394},
+pmid = {23063546},
+title = {{Structural and textural classification of erythrocytes in anaemic cases: A scanning electron microscopic study}},
+volume = {44},
+year = {2013}
+}
+
+@article{Diaz2009,
+abstract = {Visual quantification of parasitemia in thin blood films is a very tedious, subjective and time-consuming task. This study presents an original method for quantification and classification of erythrocytes in stained thin blood films infected with Plasmodium falciparum. The proposed approach is composed of three main phases: a preprocessing step, which corrects luminance differences. A segmentation step that uses the normalized RGB color space for classifying pixels either as erythrocyte or background followed by an Inclusion-Tree representation that structures the pixel information into objects, from which erythrocytes are found. Finally, a two step classification process identifies infected erythrocytes and differentiates the infection stage, using a trained bank of classifiers. Additionally, user intervention is allowed when the approach cannot make a proper decision. Four hundred fifty malaria images were used for training and evaluating the method. Automatic identification of infected erythrocytes showed a specificity of 99.7{\%} and a sensitivity of 94{\%}. The infection stage was determined with an average sensitivity of 78.8{\%} and average specificity of 91.2{\%}. {\textcopyright} 2008 Elsevier Inc. All rights reserved.},
+author = {D{\'{i}}az, Gloria and Gonz{\'{a}}lez, Fabio A. and Romero, Eduardo},
+doi = {10.1016/j.jbi.2008.11.005},
+file = {:Users/naubergois/DeepLearningMalaria/1-s2.0-S1532046408001470-main.pdf:pdf},
+isbn = {1532-0480 (Electronic)$\backslash$r1532-0464 (Linking)},
+issn = {15320464},
+journal = {Journal of Biomedical Informatics},
+keywords = {Automatic quantification,Cell classification,Class imbalance,Classifier evaluation,Clump splitting,Connected operators,Feature extraction,Inclusion-Tree,Life stage classification,Machine learning,Malaria parasites,Multi-class classifiers,Pixel color classification,Plasmodium falciparum},
+number = {2},
+pages = {296--307},
+pmid = {19166974},
+publisher = {Elsevier Inc.},
+title = {{A semi-automatic method for quantification and classification of erythrocytes infected with malaria parasites in microscopic images}},
+url = {http://dx.doi.org/10.1016/j.jbi.2008.11.005},
+volume = {42},
+year = {2009}
+}
+
+@article{Somasekar2015,
+abstract = {Malaria, one of the deadliest diseases, is responsible for nearly 627,000 deaths every year. It is diagnosed manually by pathologists using a microscope. It is time-consuming and subjected to inconsistency due to human intervention, so computerized image analysis for diagnosis has gained importance. In this article, an edge-based segmentation of erythrocytes infected with malaria parasites using microscopic images has been developed to facilitate the diagnostic process. The color space transformation and Gamma equalization reduce the effects of colors and correct luminance differences of images. Fuzzy C-means clustering is applied to extract infected erythrocytes, which is further processed for the final segmentation. The experimental results showed that the proposed method can gain 98{\%}, 93.3{\%}, 98.65{\%} and 90.33{\%} of sensitivity, specificity, prediction value positive and prediction value negative, respectively. In conclusion, the proposed method provides a consistent and robust method of edge-based segmentation of parasite infected erythrocytes using microscopic images for diagnosis.},
+author = {Somasekar, J. and {Eswara Reddy}, B.},
+doi = {10.1016/j.compeleceng.2015.04.009},
+file = {:Users/naubergois/DeepLearningMalaria/1-s2.0-S0045790615001378-main.pdf:pdf},
+issn = {00457906},
+journal = {Computers and Electrical Engineering},
+keywords = {Confusion matrix,Edge detection,Malaria diagnosis,Mathematical morphology,Microscopic images,Segmentation},
+pages = {336--351},
+publisher = {Elsevier Ltd},
+title = {{Segmentation of erythrocytes infected with malaria parasites for the diagnosis using microscopy imaging}},
+url = {http://dx.doi.org/10.1016/j.compeleceng.2015.04.009},
+volume = {45},
+year = {2015}
+}
+
+@article{Verras2017,
+abstract = {The development of new antimalarial therapies is essential, and lowering the barrier of entry for the screening and discovery of new lead compound classes can spur drug development at organizations that may not have large compound screening libraries or resources to conduct high-throughput screens. Machine learning models have been long established to be more robust and have a larger domain of applicability with larger training sets. Screens over multiple data sets to find compounds with potential malaria blood stage inhibitory activity have been used to generate multiple Bayesian models. Here we describe a method by which Bayesian quantitative structure−activity relationship models, which contain information on thousands to millions of proprietary compounds, can be shared between collaborators at both for-profit and not-for-profit institutions. This model-sharing paradigm allows for the development of consensus models that have increased predictive power over any single model and yet does not reveal the identity of any compounds in the training sets.},
+author = {Verras, Andreas and Waller, Chris L. and Gedeck, Peter and Green, Darren V.S. and Kogej, Thierry and Raichurkar, Anandkumar and Panda, Manoranjan and Shelat, Anang A. and Clark, Julie and Guy, R. Kiplin and Papadatos, George and Burrows, Jeremy},
+doi = {10.1021/acs.jcim.6b00572},
+file = {:Users/naubergois/DeepLearningMalaria/acs.jcim.6b00572.pdf:pdf},
+issn = {15205142},
+journal = {Journal of Chemical Information and Modeling},
+number = {3},
+pages = {445--453},
+pmid = {28257198},
+title = {{Shared Consensus Machine Learning Models for Predicting Blood Stage Malaria Inhibition}},
+volume = {57},
+year = {2017}
+}
+
+@phdthesis{Sorgedrager2018,
+author = {Sorgedrager, R},
+file = {:Users/naubergois/DeepLearningMalaria/943dc8a8f9c6a640f258e8afb6e8f0cc8a36.pdf:pdf},
+title = {{Automated malaria diagnosis using convolutional neural networks in an on-field setting The analysis of low quality smartphone based microscope images}},
+year = {2018}
+}
+
+@inproceedings{Liu2016,
+abstract = {We propose the coupled generative adversarial network (CoGAN) framework for generating pairs of corresponding images in two different domains. It consists of a pair of generative adversarial networks, each responsible for generating images in one domain. We show that by enforcing a simple weight-sharing constraint, the CoGAN learns to generate pairs of corresponding images without existence of any pairs of corresponding images in the two domains in the training set. In other words, the CoGAN learns a joint distribution of images in the two domains from images drawn separately from the marginal distributions of the individual domains. This is in contrast to the existing multi-modal generative models, which require corresponding images for training. We apply the CoGAN to several pair image generation tasks. For each task, the GoGAN learns to generate convincing pairs of corresponding images. We further demonstrate the applications of the CoGAN framework for the domain adaptation and cross-domain image generation tasks.},
+archivePrefix = {arXiv},
+arxivId = {1606.07536},
+author = {Liu, Ming-yu and Tuzel, Oncel},
+booktitle = {NIPS},
+doi = {arXiv:1606.07536},
+eprint = {1606.07536},
+file = {:Users/naubergois/Redes Adversarias Geradoras/6544-coupled-generative-adversarial-networks.pdf:pdf},
+isbn = {10495258},
+issn = {10495258},
+number = {Nips},
+pages = {469--477},
+title = {{Coupled Generative Adversarial Networks}},
+url = {http://arxiv.org/abs/1606.07536},
+year = {2016}
+}
+
+
+
+@MastersThesis{Sorgedrager2018,
+author = {Sorgedrager, R},
+file = {:Users/naubergois/DeepLearningMalaria/943dc8a8f9c6a640f258e8afb6e8f0cc8a36.pdf:pdf},
+title = {{Automated malaria diagnosis using convolutional neural networks in an on-field setting The analysis of low quality smartphone based microscope images}},
+year = {2018}
+}
+
+@article{Nie2016,
+abstract = {Computed tomography (CT) is critical for various clinical applications, e.g., radiotherapy treatment planning and also PET attenuation correction. However, CT exposes radiation during acquisition, which may cause side effects to patients. Compared to CT, magnetic resonance imaging (MRI) is much safer and does not involve any radiations. Therefore, recently, researchers are greatly motivated to estimate CT image from its corresponding MR image of the same subject for the case of radiotherapy planning. In this paper, we propose a data-driven approach to address this challenging problem. Specifically, we train a fully convolutional network to generate CT given an MR image. To better model the nonlinear relationship from MRI to CT and to produce more realistic images, we propose to use the adversarial training strategy and an image gradient difference loss function. We further apply AutoContext Model to implement a context-aware generative adversarial network. Experimental results show that our method is accurate and robust for predicting CT images from MRI images, and also outperforms three state-of-the-art methods under comparison.},
+archivePrefix = {arXiv},
+arxivId = {1612.05362},
+author = {Nie, Dong and Trullo, Roger and Petitjean, Caroline and Ruan, Su and Shen, Dinggang},
+doi = {10.1007/978-3-319-66179-7_48},
+eprint = {1612.05362},
+file = {:Users/naubergois/DeepLearningMalaria/1612.05362.pdf:pdf},
+isbn = {1406.2661},
+issn = {10495258},
+keywords = {auto-,deep learning,gan,generative models,image synthesis},
+title = {{Medical Image Synthesis with Context-Aware Generative Adversarial Networks}},
+url = {http://arxiv.org/abs/1612.05362},
+year = {2016}
+}
+
+
+@article{ShuleendaDevi2016,
+author = {{Shuleenda Devi}, Salam and {Alam Sheikh}, Shah and {Hussain Laskar}, Rabul},
+doi = {10.9781/ijimai.2016.426},
+file = {:Users/naubergois/DeepLearningMalaria/Erythrocyte{\_}Features{\_}for{\_}Malaria{\_}Parasite{\_}Detectio.pdf:pdf},
+issn = {1989-1660},
+journal = {International Journal of Interactive Multimedia and Artificial Intelligence},
+keywords = {arasites,erythrocyte,erythrocyte features,m orphological f eature,malaria parasite,medical imaging,of m alaria p,table i},
+number = {2},
+pages = {34},
+title = {{Erythrocyte Features for Malaria Parasite Detection in Microscopic Images of Thin Blood Smear: A Review}},
+url = {http://www.ijimai.org/journal/node/1442},
+volume = {4},
+year = {2016}
+}
+
+
+@article{Rajaraman2018,
+author = {Rajaraman, Sivaramakrishnan and Silamut, Kamolrat and Hossain, Md. A. and Ersoy, I. and Maude, Richard J. and Jaeger, Stefan and Thoma, George R. and Antani, Sameer K.},
+doi = {10.1117/1.JMI.5.3.034501},
+file = {:Users/naubergois/DeepLearningMalaria/pub9809.pdf:pdf},
+issn = {2329-4302},
+journal = {Journal of Medical Imaging},
+keywords = {18,2018,25,7,accepted for publication jun,blood smears,classification,computer-aided diagnosis,convolutional neural networks,deep learning,paper 18042r received mar,published online jul,visualization},
+number = {03},
+pages = {1},
+title = {{Understanding the learned behavior of customized convolutional neural networks toward malaria parasite detection in thin blood smear images}},
+url = {https://www.spiedigitallibrary.org/journals/journal-of-medical-imaging/volume-5/issue-03/034501/Understanding-the-learned-behavior-of-customized-convolutional-neural-networks-toward/10.1117/1.JMI.5.3.034501.full},
+volume = {5},
+year = {2018}
+}
+
+
+
+@article{Goodfellow2014,
+abstract = {We propose a new framework for estimating generative models via an adversarial process, in which we simultaneously train two models: a generative model G that captures the data distribution, and a discriminative model D that estimates the probability that a sample came from the training data rather than G. The training procedure for G is to maximize the probability of D making a mistake. This framework corresponds to a minimax two-player game. In the space of arbitrary functions G and D, a unique solution exists, with G recovering the training data distribution and D equal to 1/2 everywhere. In the case where G and D are defined by multilayer perceptrons, the entire system can be trained with backpropagation. There is no need for any Markov chains or unrolled approximate inference networks during either training or generation of samples. Experiments demonstrate the potential of the framework through qualitative and quantitative evaluation of the generated samples.},
+archivePrefix = {arXiv},
+arxivId = {1406.2661},
+author = {Goodfellow, Ian J. and Pouget-Abadie, Jean and Mirza, Mehdi and Xu, Bing and Warde-Farley, David and Ozair, Sherjil and Courville, Aaron and Bengio, Yoshua},
+doi = {10.1001/jamainternmed.2016.8245},
+eprint = {1406.2661},
+file = {:Users/naubergois/Redes Adversarias Geradoras/1406.2661.pdf:pdf},
+isbn = {1406.2661},
+issn = {10495258},
+pages = {1--9},
+pmid = {15040217},
+title = {{Generative Adversarial Networks}},
+url = {http://arxiv.org/abs/1406.2661},
+year = {2014}
+}
+
+
+@article{Devi2018,
+abstract = {{\textcopyright} 2017 The Natural Computing Applications Forum Malaria, being a life-threatening disease caused by parasites, demands its rapid and accurate diagnosis. In this paper, we develop a computer-assisted malaria-infected life-cycle stages classification based on a hybrid classifier using thin blood smear images. The major issues are: feature extraction, feature selection and classification of erythrocytes infected with different life-cycle stages of malaria. Feature set (134 dimensional features) has been defined by the combination of the proposed features along with the existing features. Features such as prediction error, co-occurrence of linear binary pattern, chrominance channel histogram, R–G color channel difference histogram and Gabor features are the newly proposed features in our system. In the feature selection, a two-stage algorithm utilizing the filter method to rank the feature, along with the incremental feature selection technique, has been analyzed. Moreover, the performance of all the individual classifiers (Naive Bayes, support vector machine, k-nearest neighbors and artificial neural network) is evaluated. Finally, the three individual classifiers are combined to develop a hybrid classifier using different classifier combining techniques. From the experimental results, it may be concluded that hybrid classifier formed by the combination of SVM, k-NN and ANN with majority voting technique provides satisfactory results compared to other individual classifiers as well as other hybrid model. An accuracy of 96.54 ± 0.73{\%} has been achieved on the collected clinical database. The results show an improvement in accuracy (11.62, 6.7, 3.39 and 2.39{\%}) as compared to the state-of-the-art individual classifiers, i.e., Naive Bayes, SVM, k-NN and ANN, respectively.},
+author = {Devi, Salam Shuleenda and Laskar, Rabul Hussain and Sheikh, Shah Alam},
+doi = {10.1007/s00521-017-2937-4},
+file = {:Users/naubergois/DeepLearningMalaria/Devi2018{\_}Article{\_}HybridClassifierBasedLifeCycle.pdf:pdf},
+issn = {09410643},
+journal = {Neural Computing and Applications},
+keywords = {Classifier combination techniques,Erythrocyte,Hybrid classifier,Kruskal–Wallis with incremental feature selection (IFS) technique,Malaria infection},
+number = {8},
+pages = {217--235},
+publisher = {Springer London},
+title = {{Hybrid classifier based life cycle stages analysis for malaria-infected erythrocyte using thin blood smear images}},
+volume = {29},
+year = {2018}
+}
+
+@article{Subramaniam2011,
+author = {Subramaniam, Sangeetha and Mehrotra, Monica and Gupta, Dinesh},
+doi = {10.4137/BECB.S7503},
+file = {:Users/naubergois/DeepLearningMalaria/Support{\_}vector{\_}machine{\_}based{\_}c.PDF:PDF},
+issn = {1179-5972},
+journal = {Biomedical Engineering and Computational Biology},
+keywords = {10,24,3 13,4137,becb,biology 2011,biomedical engineering and computational,com,doi,drug,from http,in silico,inhibitor,la-press,molecular descriptors,plasmodium,proliferation,s7503,screening,support vector machine,this article is available,www},
+pages = {13},
+title = {{Support Vector Machine Based Classification Model for Screening Plasmodium falciparum Proliferation Inhibitors and Non-Inhibitors}},
+url = {http://www.la-press.com/support-vector-machine-based-classification-model-for-screening-plasmo-article-a2752},
+year = {2011}
+}
+
+@article{Linder2014,
+abstract = {INTRODUCTION: Microscopy is the gold standard for diagnosis of malaria, however, manual evaluation of blood films is highly dependent on skilled personnel in a time-consuming, error-prone and repetitive process. In this study we propose a method using computer vision detection and visualization of only the diagnostically most relevant sample regions in digitized blood smears.$\backslash$n$\backslash$nMETHODS: Giemsa-stained thin blood films with P. falciparum ring-stage trophozoites (n = 27) and uninfected controls (n = 20) were digitally scanned with an oil immersion objective (0.1 µm/pixel) to capture approximately 50,000 erythrocytes per sample. Parasite candidate regions were identified based on color and object size, followed by extraction of image features (local binary patterns, local contrast and Scale-invariant feature transform descriptors) used as input to a support vector machine classifier. The classifier was trained on digital slides from ten patients and validated on six samples.$\backslash$n$\backslash$nRESULTS: The diagnostic accuracy was tested on 31 samples (19 infected and 12 controls). From each digitized area of a blood smear, a panel with the 128 most probable parasite candidate regions was generated. Two expert microscopists were asked to visually inspect the panel on a tablet computer and to judge whether the patient was infected with P. falciparum. The method achieved a diagnostic sensitivity and specificity of 95{\%} and 100{\%} as well as 90{\%} and 100{\%} for the two readers respectively using the diagnostic tool. Parasitemia was separately calculated by the automated system and the correlation coefficient between manual and automated parasitemia counts was 0.97.$\backslash$n$\backslash$nCONCLUSION: We developed a decision support system for detecting malaria parasites using a computer vision algorithm combined with visualization of sample areas with the highest probability of malaria infection. The system provides a novel method for blood smear screening with a significantly reduced need for visual examination and has a potential to increase the throughput in malaria diagnostics.},
+author = {Linder, Nina and Turkki, Riku and Walliander, Margarita and M{\aa}rtensson, Andreas and Diwan, Vinod and Rahtu, Esa and Pietik{\"{a}}inen, Matti and Lundin, Mikael and Lundin, Johan},
+doi = {10.1371/journal.pone.0104855},
+file = {:Users/naubergois/DeepLearningMalaria/document3.pdf:pdf},
+issn = {19326203},
+journal = {PLoS ONE},
+number = {8},
+pmid = {25144549},
+title = {{A malaria diagnostic tool based on computer vision screening and visualization of Plasmodium falciparum candidate areas in digitized blood smears}},
+volume = {9},
+year = {2014}
+}
+
+@article{Abbas2018,
+abstract = {{\textcopyright} 2016 The Natural Computing Applications Forum Malaria parasitemia is the quantitative measurement of the parasites in the blood to grade the degree of infection. Light microscopy is the most well-known method used to examine the blood for parasitemia quantification. The visual quantification of malaria parasitemia is laborious, time-consuming and subjective. Although automating the process is a good solution, the available techniques are unable to evaluate the same cases such as anemia and hemoglobinopathies due to deviation from normal RBCs' morphology. The main aim of this research is to examine the microscopic images of stained thin blood smears using a variety of computer vision techniques, grading malaria parasitemia on independent factors (RBC's morphology). The proposed methodology is based on inductive approach, color segmentation of malaria parasites through adaptive algorithm of Gaussian mixture model (GMM). The quantification accuracy of RBCs is improved, splitting the occlusions of RBCs with distance transform and local maxima. Further, the classification of infected and non-infected RBCs has been made to properly grade parasitemia. The training and evaluation have been carried out on image dataset with respect to ground truth data, determining the degree of infection with the sensitivity of 98 {\%} and specificity of 97 {\%}. The accuracy and efficiency of the proposed scheme in the context of being automatic were proved experimentally, surpassing other state-of-the-art schemes. In addition, this research addressed the process with independent factors (RBCs' morphology). Eventually, this can be considered as low-cost solutions for malaria parasitemia quantification in massive examinations.},
+author = {Abbas, Naveed and Saba, Tanzila and Mohamad, Dzulkifli and Rehman, Amjad and Almazyad, Abdulaziz S. and Al-Ghamdi, Jarallah Saleh},
+doi = {10.1007/s00521-016-2474-6},
+file = {:Users/naubergois/DeepLearningMalaria/Abbas2018{\_}Article{\_}MachineAidedMalariaParasitemia.pdf:pdf},
+isbn = {0052101624746},
+issn = {09410643},
+journal = {Neural Computing and Applications},
+keywords = {Features mining,Machine aided,Malaria Parasitemia,Thin blood smears},
+number = {3},
+pages = {803--818},
+publisher = {Springer London},
+title = {{Machine aided malaria parasitemia detection in Giemsa-stained thin blood smears}},
+volume = {29},
+year = {2018}
+}
+
+@article{Kouwaye,
+abstract = {This paper deals with prediction of anopheles number, the main vector of malaria risk, using environmental and climate variables. The variables selection is based on an automatic machine learning method using regression trees, and random forests combined with stratified two levels cross validation. The minimum threshold of variables importance is accessed using the quadratic distance of variables importance while the optimal subset of selected variables is used to perform predictions. Finally the results revealed to be qualitatively better, at the selection, the prediction , and the CPU time point of view than those obtained by GLM-Lasso method.},
+archivePrefix = {arXiv},
+arxivId = {1606.07578},
+author = {Kouway{\`{e}}, Bienvenue},
+eprint = {1606.07578},
+file = {:Users/naubergois/DeepLearningMalaria/1606.07578.pdf:pdf},
+keywords = {cross-validation,prediction,random forest,regression trees,selection,variables},
+pages = {1--15},
+title = {{Regression Trees and Random forest based feature selection for malaria risk exposure prediction}},
+url = {http://arxiv.org/abs/1606.07578}
+}
+
+@article{Sudheer2014,
+abstract = {Accurate and reliable forecasts of malarial incidences are necessary for the health authorities to ensure the appropriate action for the control of the outbreak. In this study, a novel method based on coupling the Firefly Algorithm (FFA) and Support Vector Machines (SVM) has been proposed to forecast the malaria incidences. The performance of SVM models depends upon the appropriate choice of SVM parameters. In this study FFA has been employed for determining the parameters of SVM. The proposed SVM-FFA model has been adopted in predicting the malarial incidences in Jodhpur and Bikaner area where the malaria transmission is unstable. Monthly averages of rainfall, temperature, relative humidity and malarial incidences have been considered as input variables. Time series of monthly notifications of malaria cases has been obtained from primary health centers and from other local health facilities for a period of January 1998 to December 2002 in the region of Bikaner and from January 1998 to December 2000 in Jodhpur region. Further, the rainfall, relative humidity and temperature data have been obtained from meteorological records. The performance of the proposed SVM-FFA model has been compared with Artificial Neural Networks (ANN), Auto-Regressive Moving Average method and also with Support Vector Machine. The results indicate that the proposed SVM-FFA model provides more accurate forecasts compared to the other traditional techniques. Further, it has been recommended to carry out additional strides to explore the utility and efficacy of SVM-FFA model. Thus SVM-FFA can be an alternate tool to facilitate the control of vector borne diseases like malaria. {\textcopyright} 2013 Elsevier B.V.},
+author = {Sudheer, Ch and Sohani, S. K. and Kumar, Deepak and Malik, Anushree and Chahar, B. R. and Nema, A. K. and Panigrahi, B. K. and Dhiman, R. C.},
+doi = {10.1016/j.neucom.2013.09.030},
+file = {:Users/naubergois/DeepLearningMalaria/1-s2.0-S092523121300951X-main.pdf:pdf},
+isbn = {0925-2312},
+issn = {09252312},
+journal = {Neurocomputing},
+keywords = {FFA,Forecasting,Malarial incidences,SVM,Time series},
+pages = {279--288},
+publisher = {Elsevier},
+title = {{A Support Vector Machine-Firefly Algorithm based forecasting model to determine malaria transmission}},
+url = {http://dx.doi.org/10.1016/j.neucom.2013.09.030},
+volume = {129},
+year = {2014}
+}
+
+@article{Muralidharan2016,
+author = {Muralidharan, Vishnu and Dong, Yuhang and {David Pan}, W.},
+doi = {10.1109/BHI.2016.7455873},
+file = {:Users/naubergois/DeepLearningMalaria/07455873.pdf:pdf},
+isbn = {9781509024551},
+journal = {3rd IEEE EMBS International Conference on Biomedical and Health Informatics, BHI 2016},
+pages = {216--219},
+title = {{A comparison of feature selection methods for machine learning based automatic malarial cell recognition in wholeslide images}},
+year = {2016}
+}
+
+
+@article{Das2013,
+abstract = {The aim of this paper is to address the development of computer assisted malaria parasite characterization and classification using machine learning approach based on light microscopic images of peripheral blood smears. In doing this, microscopic image acquisition from stained slides, illumination correction and noise reduction, erythrocyte segmentation, feature extraction, feature selection and finally classification of different stages of malaria (Plasmodium vivax and Plasmodium falciparum) have been investigated. The erythrocytes are segmented using marker controlled watershed transformation and subsequently total ninety six features describing shape-size and texture of erythrocytes are extracted in respect to the parasitemia infected versus non-infected cells. Ninety four features are found to be statistically significant in discriminating six classes. Here a feature selection-cum-classification scheme has been devised by combining F-statistic, statistical learning techniques i.e., Bayesian learning and support vector machine (SVM) in order to provide the higher classification accuracy using best set of discriminating features. Results show that Bayesian approach provides the highest accuracy i.e., 84{\%} for malaria classification by selecting 19 most significant features while SVM provides highest accuracy i.e., 83.5{\%} with 9 most significant features. Finally, the performance of these two classifiers under feature selection framework has been compared toward malaria parasite classification. {\textcopyright} 2012 Elsevier Ltd.},
+author = {Das, Dev Kumar and Ghosh, Madhumala and Pal, Mallika and Maiti, Asok K. and Chakraborty, Chandan},
+doi = {10.1016/j.micron.2012.11.002},
+file = {:Users/naubergois/DeepLearningMalaria/1-s2.0-S0968432812002594-main.pdf:pdf},
+issn = {09684328},
+journal = {Micron},
+keywords = {Bayesian classifier,Erythrocyte,Machine learning,Malaria parasite,Texture},
+pages = {97--106},
+pmid = {23218914},
+publisher = {Elsevier Ltd},
+title = {{Machine learning approach for automated screening of malaria parasite using light microscopic images}},
+url = {http://dx.doi.org/10.1016/j.micron.2012.11.002},
+volume = {45},
+year = {2013}
+}
+
+@article{Pattanaik2017,
+abstract = {The infected red blood cell pixel count in thin blood smear image plays a vital role in malaria parasite detection analysis. This paper proposes three stage object detection procedure of computer vision with Kernel-based detection and Kalman filtering process to detect malaria parasite. The use of Kernel based detection with exact pixel information makes the proposed procedure capable of accurately detecting and localizing the target infected by malaria parasites in thin blood smear images. The experiment is conducted on several microscopically preliminary screened benchmark gold standard diagnosis datasets of blood smear images, each 300×300 pixels of Plasmodium falciparum in thin blood smear images. The 300×300 size images were split into overlapping patches, each of size 50×50 pixels. The experimental results on the malaria blood smear image datasets demonstrate the effectiveness of the proposed method over the existing computer vision algorithms. The novelty of the work lies in the application of an object detection for malaria parasite identification in computer vision for thin blood smear images.},
+author = {Pattanaik, P A and Swarnkar, Tripti and Sheet, Debdoot},
+file = {:Users/naubergois/DeepLearningMalaria/08217986.pdf:pdf},
+isbn = {9781509030507},
+keywords = {Computer vision,Kalman Filter,Kernal Based Detection,Malaria,Object Detection},
+pages = {2120--2123},
+title = {{Object Detection Technique For Malaria Parasite In Thin Blood Smear Images}},
+url = {https://www.cdc.gov/dpdx/malaria/index.html},
+year = {2017}
+}
+
+@article{Abidin2017,
+abstract = {Malaria is a serious health problem in Indonesia caused by malaria parasites. Early detection of Malaria is an important step to an effective treatment. Malaria parasite identification should be carried out based on observation on at least 100 fields view strong magnification of thick blood smears. Malaria parasite detection process is usually carried out with a microscope observation. But it consumes too much time and the number experts are limited. To overcome these obstacles, we developed a computer aided diagnosis system to automatically detecting malaria parasites. Parasite image segmentation is an important step in the detection process. But segmentation of malaria parasite that consists of a nucleus and cytoplasm in a thick blood smear is not easy because the boundary between object and background is not clear and has a low contrast. This study proposed a solution to the problem of segmentation of malaria candidate parasite candidates from thick blood smears. The proposed method focused on image enhancement and segmentation steps. Image enhancement consists of lowpass filtering to reduce noise and contrast stretching to increase contrast. Segmentation is used to detect object using active contour without edge, then erosion, dilation, masking, contrast stretching, and thresholding. The result showed that the proposed method is capable to segment malaria parasite candidates from thick blood smear with 97.57{\%} accuracy, 12.04{\%} (283 pixels) false negative rate (FNR), and 6.87{\%} (202 pixels) false discovery rate (FDR), from 19600 pixels total in each image.},
+author = {Abidin, Sekar Rini and Salamah, Umi and Nugroho, Anto Satriyo},
+doi = {10.1109/IBIOMED.2016.7869824},
+file = {:Users/naubergois/DeepLearningMalaria/07869824.pdf:pdf},
+isbn = {9781509041428},
+journal = {Proceedings of 2016 1st International Conference on Biomedical Engineering: Empowering Biomedical Technology for Better Future, IBIOMED 2016},
+keywords = {Active contour without edge,Malaria parasite candidates,Segmentation,Thick blood smears},
+title = {{Segmentation of malaria parasite candidates from thick blood smear microphotographs image using active contour without edge}},
+year = {2017}
+}
+
+@article{Zhang2016,
+author = {Zhang, Zheng and Ong, L.L. Sharon and Fang, Kong and Matthew, Athul and Dauwels, Justin and Dao, Ming and Asada, Harry},
+doi = {10.1109/EMBC.2016.7591599},
+file = {:Users/naubergois/DeepLearningMalaria/07591599.pdf:pdf},
+isbn = {978-1-4577-0220-4},
+issn = {1557170X},
+journal = {2016 38th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)},
+pages = {3981--3984},
+title = {{Image classification of unlabeled malaria parasites in red blood cells}},
+url = {http://ieeexplore.ieee.org/document/7591599/},
+year = {2016}
+}
+
+@article{Kareem2012,
+abstract = {This paper illustrates the automated diagnosis of malaria parasite (Plasmodium species) in microscopic images of Giemsa stained thin blood films. The procedure adapts a morphological approach for blood cell identification and uses the image features such as intensity, histogram, relative size and geometry for further analysis. Two methods of object classification have been described for parasite detection; one based on relative size and morphology and the other based on intensity variation. Furthermore, an analytical study on both methods has been performed in order to validate the accuracy of the methods. {\textcopyright} 2012 IEEE.},
+author = {Kareem, S. and Kale, I. and Morling, R. C S},
+doi = {10.1109/APCCAS.2012.6419016},
+file = {:Users/naubergois/DeepLearningMalaria/06419016.pdf:pdf},
+isbn = {9781457717291},
+journal = {IEEE Asia-Pacific Conference on Circuits and Systems, Proceedings, APCCAS},
+pages = {240--243},
+title = {{Automated malaria parasite detection in thin blood films:-A hybrid illumination and color constancy insensitive, morphological approach}},
+year = {2012}
+}
+
+
+
+@article{A.Abisoye2018,
+author = {{A. Abisoye}, Opeyemi and {G. Jimoh}, Rasheed},
+doi = {10.5815/ijmecs.2018.04.03},
+file = {:Users/naubergois/DeepLearningMalaria/IJMECS-V10-N4-3.pdf:pdf},
+issn = {20750161},
+journal = {International Journal of Modern Education and Computer Science},
+number = {4},
+pages = {18--25},
+title = {{Comparative Study on the Prediction of Symptomatic and Climatic based Malaria Parasite Counts Using Machine Learning Models}},
+url = {http://www.mecs-press.org/ijmecs/ijmecs-v10-n4/v10n4-3.html},
+volume = {10},
+year = {2018}
+}
+
+@article{Kareem2012,
+abstract = {This paper illustrates the automated diagnosis of malaria parasite (Plasmodium species) in microscopic images of Giemsa stained thin blood films. The procedure adapts a morphological approach for blood cell identification and uses the image features such as intensity, histogram, relative size and geometry for further analysis. Two methods of object classification have been described for parasite detection; one based on relative size and morphology and the other based on intensity variation. Furthermore, an analytical study on both methods has been performed in order to validate the accuracy of the methods. {\textcopyright} 2012 IEEE.},
+author = {Kareem, S. and Kale, I. and Morling, R. C S},
+doi = {10.1109/APCCAS.2012.6419016},
+file = {:Users/naubergois/DeepLearningMalaria/06419016.pdf:pdf},
+isbn = {9781457717291},
+journal = {IEEE Asia-Pacific Conference on Circuits and Systems, Proceedings, APCCAS},
+pages = {240--243},
+title = {{Automated malaria parasite detection in thin blood films:-A hybrid illumination and color constancy insensitive, morphological approach}},
+year = {2012}
+}
+
+@article{Nugroho2017,
+abstract = {{\textcopyright}/2017/IEEE. The region of interest (RoI) has the most useful information in image processing since the targeted objects are covered in this area. By determining the precise position of RoI, a computer-based identification will be able to work more efficiently, to give a better contribution in system and to eliminate objects that may intrude overall process. In malaria disease, the existence of Plasmodium can be observed from patient's microscopic thin blood smear images. Having utilised the computer aided detection based on image processing, malaria disease can be detected earlier and more objective in order to support the final decision of paramedics. This study proposes a novel method to automatically determine the region of interest (RoI) on thin blood smear images for facilitating the process of Plasmodium parasite detection. The approach includes Otsu thresholding method, morphological operation and binary large object (BLOB) analysis. Evaluation results on 24 thin blood smear images show that the proposed method achieves the sensitivity and PPV rates of 87.5{\%} and 75.7{\%}, respectively. These successful results in automatically determine the RoI which contains the Plasmodium parasite indicate that the proposed method has a potential to be implemented in the development of a computer aided malaria detection system.},
+author = {Nugroho, Hanung Adi and Saputra, Wahyu Andi and Permanasari, Adhistya Erna and Murhandarwati, E. Elsa Herdiana},
+doi = {10.1109/ISITIA.2017.8124108},
+file = {:Users/naubergois/DeepLearningMalaria/08124108.pdf:pdf},
+isbn = {9781538627068},
+journal = {2017 International Seminar on Intelligent Technology and Its Application: Strengthening the Link Between University Research and Industry to Support ASEAN Energy Sector, ISITIA 2017 - Proceeding},
+keywords = {Automated determination of region,Binary large object analysis,Morphological operation,Plasmodium parasite,Thin blood smear images},
+pages = {352--355},
+title = {{Automated determination of plasmodium region of interest on thin blood smear images}},
+volume = {2017-January},
+year = {2017}
+}
+
+@article{Mehanian2017,
+author = {Mehanian, Courosh and Jaiswal, Mayoore and Delahunt, Charles and Thompson, Clay and Horning, Matt and Hu, Liming and McGuire, Shawn and Ostbye, Travis and Mehanian, Martha and Wilson, Ben and Champlin, Cary and Long, Earl and Proux, Stephane and Gamboa, Dionicia and Chiodini, Peter and Carter, Jane and Dhorda, Mehul and Isaboke, David and Ogutu, Bernhards and Oyibo, Wellington and Villasis, Elizabeth and Tun, Kyaw Myo and Bachman, Christine and Bell, David},
+doi = {10.1109/ICCVW.2017.22},
+file = {:Users/naubergois/DeepLearningMalaria/mehanian2017.pdf:pdf},
+isbn = {978-1-5386-1034-3},
+journal = {2017 IEEE International Conference on Computer Vision Workshops (ICCVW)},
+pages = {116--125},
+title = {{Computer-Automated Malaria Diagnosis and Quantitation Using Convolutional Neural Networks}},
+url = {http://ieeexplore.ieee.org/document/8265232/},
+year = {2017}
+}
+
+@article{Poostchi2018a,
+abstract = {Malaria remains a major burden on global health, with roughly 200 million cases worldwide and more than 400,000 deaths per year. Besides biomedical research and political efforts, modern information technology is playing a key role in many attempts at fighting the disease. One of the barriers toward a successful mortality reduction has been inadequate malaria diagnosis in particular. To improve diagnosis, image analysis software and machine learning methods have been used to quantify parasitemia in microscopic blood slides. This article gives an overview of these techniques and discusses the current developments in image analysis and machine learning for microscopic malaria diagnosis. We organize the different approaches published in the literature according to the techniques used for imaging, image preprocessing, parasite detection and cell segmentation, feature computation, and automatic cell classification. Readers will find the different techniques listed in tables, with the relevant articles cited next to them, for both thin and thick blood smear images. We also discussed the latest developments in sections devoted to deep learning and smartphone technology for future malaria diagnosis.},
+author = {Poostchi, Mahdieh and Silamut, Kamolrat and Maude, Richard J. and Jaeger, Stefan and Thoma, George},
+doi = {10.1016/j.trsl.2017.12.004},
+file = {:Users/naubergois/DeepLearningMalaria/1-s2.0-S193152441730333X-main.pdf:pdf},
+isbn = {1878-1810},
+issn = {18781810},
+journal = {Translational Research},
+mendeley-groups = {MalariaDeepLearning},
+pages = {36--55},
+pmid = {29360430},
+publisher = {Elsevier Inc.},
+title = {{Image analysis and machine learning for detecting malaria}},
+url = {https://doi.org/10.1016/j.trsl.2017.12.004},
+volume = {194},
+year = {2018}
+}
+
+@article{Liang2017,
+abstract = {{\textcopyright} 2016 IEEE.Malaria is a major global health threat. The standard way of diagnosing malaria is by visually examining blood smears for parasite-infected red blood cells under the microscope by qualified technicians. This method is inefficient and the diagnosis depends on the experience and the knowledge of the person doing the examination. Automatic image recognition technologies based on machine learning have been applied to malaria blood smears for diagnosis before. However, the practical performance has not been sufficient so far. This study proposes a new and robust machine learning model based on a convolutional neural network (CNN) to automatically classify single cells in thin blood smears on standard microscope slides as either infected or uninfected. In a ten-fold cross-validation based on 27,578 single cell images, the average accuracy of our new 16-layer CNN model is 97.37{\%}. A transfer learning model only achieves 91.99{\%} on the same images. The CNN model shows superiority over the transfer learning model in all performance indicators such as sensitivity (96.99{\%} vs 89.00{\%}), specificity (97.75{\%} vs 94.98{\%}), precision (97.73{\%} vs 95.12{\%}), F1 score (97.36{\%} vs 90.24{\%}), and Matthews correlation coefficient (94.75{\%} vs 85.25{\%}).},
+author = {Liang, Z. and Powell, A. and Ersoy, I. and Poostchi, M. and Silamut, K. and Palaniappan, K. and Guo, P. and Hossain, M.A. and Sameer, A. and Maude, R.J. and Huang, J.X. and Jaeger, S. and Thoma, G.},
+doi = {10.1109/BIBM.2016.7822567},
+file = {:Users/naubergois/DeepLearningMalaria/liang2016.pdf:pdf},
+isbn = {9781509016105},
+journal = {Proceedings - 2016 IEEE International Conference on Bioinformatics and Biomedicine, BIBM 2016},
+keywords = {Computer-aided diagnosis,Convolutional neural network,Deep learning,Machine learning,Malaria},
+pages = {493--496},
+title = {{CNN-based image analysis for malaria diagnosis}},
+year = {2017}
+}
+
+@article{Dong2017,
+author = {Dong, Yuhang and Jiang, Zhuocheng and Shen, Hongda and {David Pan}, W. and Williams, Lance A. and Reddy, Vishnu V. B. and Benjamin, William H. and Bryan, Allen W.},
+doi = {10.1109/BHI.2017.7897215},
+file = {:Users/naubergois/DeepLearningMalaria/dong2017.pdf:pdf},
+isbn = {978-1-5090-4179-4},
+journal = {2017 IEEE EMBS International Conference on Biomedical {\&} Health Informatics (BHI)},
+keywords = {Image analysis,processing and classification,Supervised learning method,Machine learning},
+pages = {101--104},
+title = {{Evaluations of deep convolutional neural networks for automatic identification of malaria infected cells}},
+url = {http://ieeexplore.ieee.org/document/7897215/},
+year = {2017}
+}
+
+@article{Dong2017a,
+author = {Dong, Yuhang and Jiang, Zhuocheng and Shen, Hongda and Pan, W David},
+doi = {10.1109/SECON.2017.7925268},
+file = {:Users/naubergois/DeepLearningMalaria/dong20172.pdf:pdf},
+isbn = {9781538615393},
+issn = {07347502},
+journal = {SoutheastCon, 2017},
+pages = {1--6},
+title = {{Classification accuracies of malaria infected cells using deep convolutional neural networks based on decompressed images}},
+year = {2017}
+}
+
+
+
+@inproceedings{hung2017applying,
+  title={Applying Faster R-CNN for Object Detection on Malaria Images},
+  author={Hung, Jane and Carpenter, Anne},
+  booktitle={2017 IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)},
+  pages={808--813},
+  year={2017},
+  organization={IEEE}
+}
