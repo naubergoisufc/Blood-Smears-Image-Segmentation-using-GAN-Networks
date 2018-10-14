@@ -1,0 +1,35 @@
+
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+\begin{lstlisting}[language=Python,numbers=left,frame=tb,caption=Generator Keras Code]
+model = Sequential()
+
+model.add(Dense(512 * 7* 7, activation="relu",     
+input_dim=self.latent_dim))
+
+model.add(Reshape((7,7, 512)))
+model.add(UpSampling2D())
+model.add(Conv2D(256, kernel_size=3, padding="same"))
+model.add(BatchNormalization(momentum=0.8))
+model.add(Activation("relu"))
+model.add(UpSampling2D())
+model.add(Conv2D(128, kernel_size=3, padding="same"))
+model.add(BatchNormalization(momentum=0.8))
+model.add(Activation("relu"))
+model.add(UpSampling2D())
+model.add(Conv2D(64, kernel_size=3, padding="same"))
+model.add(BatchNormalization(momentum=0.8))
+model.add(Activation("relu"))
+model.add(UpSampling2D())
+model.add(Conv2D(32, kernel_size=3, padding="same"))
+model.add(BatchNormalization(momentum=0.8))
+model.add(Activation("relu"))
+model.add(Conv2D(self.channels, 
+            kernel_size=3, padding="same"))
+model.add(Activation("tanh"))
+
+model.summary()
+
+noise = Input(shape=(self.latent_dim,))
+img = model(noise)
+
+\end{lstlisting}
