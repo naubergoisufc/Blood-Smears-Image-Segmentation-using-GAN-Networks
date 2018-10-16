@@ -1,29 +1,34 @@
 \section{The Proposed Method -GAN network object detection method}
 \label{segmethod}
 
-In this section, we describe the process for object detection in using GAN network object detection method. The process consist of the following steps: blood smears image acquisition, image generation with GANs networks (Figure \ref{fig:maincomp} -\ding{202} ); train a convolutional neural network (Figure \ref{fig:maincomp} -\ding{203});  apply adaptive  threshold filter (Figure \ref{fig:maincomp} -\ding{204}) and classify objects with the trained convolutional network (Figure \ref{fig:maincomp} -\ding{205}). 
+In this section, we describe the process for object detection in using GAN networks. The process consist of the following steps: blood smears image acquisition, image generation with GANs networks (Figure \ref{fig:maincomp} -\ding{202} ); train a convolutional neural network (Figure \ref{fig:maincomp} -\ding{203});  apply adaptive  threshold filter (Figure \ref{fig:maincomp} -\ding{204}) and classify objects with the trained convolutional network (Figure \ref{fig:maincomp} -\ding{205}). 
 
-Several experiments where conducted in order to analyse the benefits of use GAN networks in the proposed method. The images for the experiments where acquired from the repository presented by Quinn et al. \cite{Quinn2016DeepDiagnostics}.  The code are developed in python language using the Keras framework.
+\begin{figure*}[h]
+\caption{Proposed method main steps.}
+\label{fig:maincomp}
+  \includegraphics[width=\textwidth]{images/MainComponents.png}
+\end{figure*}
 
-The experiments used a Deep convolutional generative adversarial network according to the architecture shown in figure
+Several experiments where conducted in order to analyze the benefits of use GAN networks in the proposed method. The images for the experiments where acquired from the repository presented by Quinn et al. \cite{Quinn2016DeepDiagnostics}.  The code are developed in python language using the Keras framework.
+
+The experiments used a Deep convolutional generative adversarial network according to the code as shown in listing \ref{lst:gen} and \ref{lst:dis}. The Generator receive as input a noise vector (Listing \ref{lst:gen}- lines 3 and 4) which passes through convolutional, normalization , upsampling and activation layers. Batch Normalization normalizing activations
+throughout the network, it prevents small changes
+to the parameters from amplifying into larger and suboptimal
+changes in activations in gradients; for instance, it
+prevents the training from getting stuck in the saturated
+regimes of nonlinearities.
 
 \input{sections/listing/Gan_list.tex}
 
+\input{sections/listing/Gan_list_disc.tex}
 
-\begin{figure*}[h]
-\caption{Main components of the proposed method .}
-\label{fig:maincomp}
-  \includegraphics[width=\textwidth]{images/MainComponents.png}
-  
-\end{figure*}
-
-
+Figs. \ref{fig:gen50},\ref{fig:gen250} and \ref{fig:gen30410} presents the images generated after 50,250 and 30410 epochs.
 
 \begin{figure}[h]
-\caption{Main components of the proposed method .}
+\caption{Generated images after 50 epochs}
 \label{fig:gen50}
 \begin{center}
-\includegraphics[scale=0.45]{./images/generation/alta_mnist_50.png} \end{center}\caption{Generated images after 50 epochs}
+\includegraphics[scale=0.45]{./images/generation/alta_mnist_50.png} \end{center}
 \end{figure}
 
 \begin{figure}[h]
@@ -31,17 +36,19 @@ The experiments used a Deep convolutional generative adversarial network accordi
 \label{fig:gen250}
 \begin{center}
 \includegraphics[scale=0.45]{./images/generation/alta_mnist_250.png} \end{center}
-
 \end{figure}
 
-
 \begin{figure}[h]
+\caption{Generated images after 30410 epochs}
 \label{fig:gen30410}
 \begin{center}
 \includegraphics[scale=0.45]{./images/generation/alta_mnist_30410.png} \end{center}
-\caption{Generated images after 30410 epochs}
 \end{figure}
 
+
+After the generation of the images by the DGAN network, We use  data augmentation techniques. We follow the simple data augmentation for training: pixels are padded on each side,
+and a 50x50 crop is randomly sampled from the padded
+image or its horizontal flip.  This allows the network to learn invariance to deformations. Data augmentation is essential to teach the network the desired invariance and robustness properties, when only few training samples are available and realistic deformations can be simulated efficiently.
 
 
 \begin{figure*}[htp]
@@ -58,6 +65,7 @@ The experiments used a Deep convolutional generative adversarial network accordi
   }
 \end{figure*}
 
+Table presents the result for 
 
 \input{tables/tableResult.tex}
 
